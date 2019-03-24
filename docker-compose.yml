@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  koa:
+    build:
+      context: ./koa
+
+  express:
+    build:
+      context: ./express
+    ports:
+      - "80:80"
+  
+  fastify:
+    build:
+      context: ./fastify
+  
+  autocannon:
+    build:
+      context: ./autocannon
